@@ -1,0 +1,62 @@
+body {
+    --input-width: 45%;
+    --button-width: 25%;
+    --wrapper-padding: 10px;
+    --wrapper-input-width: 100% !important;
+    --wrapper-input-height: 100px;
+    --min-result-container-width: 30vh;
+}
+
+.main-action {
+    margin: 0;
+    position: relative;
+    width: var(--wrapper-input-width);
+    height: var(--wrapper-input-height) !important;
+}
+
+.main-action input[type="text"] {
+    width: var(--input-width);
+    max-width: var(--input-width);
+    position: relative;
+    margin: 0;
+    margin-top: calc(var(--wrapper-input-height)/2 - 1.5em);
+    margin-left: calc(calc((var(--wrapper-input-width) - calc(var(--input-width) + var(--button-width)))) / 2);
+    padding: var(--wrapper-padding);
+}
+
+.main-action input[type="button"] {
+    margin: 0;
+    width: var(--button-width);
+    max-width: var(--button-width);
+    padding: var(--wrapper-padding);
+    margin-top: calc(-1 * calc(var(--wrapper-padding)/2));
+}
+
+.option-device {
+    padding: 0 50px;
+}
+
+.option-device .nav-item {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.option-device .active {
+    border-style: solid;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-color: white;
+}
+
+.option-device li a {
+    cursor: pointer;
+}
+
+.result-container {
+    min-height: var(--min-result-container-width);
+}
+
+.result-container .spinner-grow{
+    margin-top: calc(calc(var(--min-result-container-width) / 2) - 2rem);
+}

@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
+const { dest } = require('gulp');
 
 var paths = {
     styles : {
@@ -21,6 +22,12 @@ var paths = {
         ],
         dest : 'static/css/compiled'
     },
+    folder : {
+        font_awesome: {
+            src : 'node_modules/font-awesome/fonts/*',
+            dest : 'static/fonts/'
+        }
+    },
     image : [
         
     ]
@@ -38,4 +45,9 @@ gulp.task('buildJS', function(){
     .pipe(gulp.dest(paths.script.dest));
 });
 
-gulp.task('main', gulp.series('buildCSS', 'buildJS'));
+gulp.task('copyFolder', function(){
+    return gulp.src(paths.folder.font_awesome.src)
+    .pipe(gulp.dest(paths.folder.font_awesome.dest));
+});
+
+gulp.task('main', gulp.series('buildCSS', 'buildJS', 'copyFolder'));
