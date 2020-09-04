@@ -1,6 +1,6 @@
 body {
     --input-width: 45%;
-    --button-width: 25%;
+    --button-width: 15%;
     --wrapper-padding: 10px;
     --wrapper-input-width: 100% !important;
     --wrapper-input-height: 100px;
@@ -19,17 +19,21 @@ body {
     max-width: var(--input-width);
     position: relative;
     margin: 0;
+    border: 0;
     margin-top: calc(var(--wrapper-input-height)/2 - 1.5em);
     margin-left: calc(calc((var(--wrapper-input-width) - calc(var(--input-width) + var(--button-width)))) / 2);
     padding: var(--wrapper-padding);
+    overflow: hidden;
 }
 
-.main-action input[type="button"] {
+.main-action button[type="button"] {
     margin: 0;
+    border: 0;
     width: var(--button-width);
     max-width: var(--button-width);
     padding: var(--wrapper-padding);
     margin-top: calc(-1 * calc(var(--wrapper-padding)/2));
+    overflow: hidden;
 }
 
 .option-device {
