@@ -15,7 +15,10 @@ var paths = {
         dest : 'static/js/compiled'
     },
     scss : {
-        src : ['node_modules/bootstrap/scss/bootstrap.scss'],
+        src : [
+            'node_modules/bootstrap/scss/bootstrap.scss',
+            'node_modules/font-awesome/scss/font-awesome.scss'
+        ],
         dest : 'static/css/compiled'
     },
     image : [
@@ -36,6 +39,3 @@ gulp.task('buildJS', function(){
 });
 
 gulp.task('main', gulp.series('buildCSS', 'buildJS'));
-/*
-    > gulp main
-*/

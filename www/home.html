@@ -3,41 +3,64 @@
 {% block main_content %}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Automated Testing In Web</a>
+    <a class="navbar-brand" href="/"><strong>AutomatedTesting</strong> In Web</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#">Result</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
     </div>
 </nav>
+<div class="container w-100 text-light bg-dark" >
+    <div class="main-action">
+        <input type="text" name="url" placeholder="Enter a web page URL" aria-label="Enter a web page URL">
+        <input type="button" class="btn btn-primary" value="ANALYZE" >
+    </div>
+</div>
+
+<style>
+    body{
+        --input-width: 50%;
+        --button-width: 20%;
+        --wrapper-padding: 10px;
+        --wrapper-input-width: 100%;
+        --wrapper-input-height: 200px;
+    }
+    .main-action {
+        margin: 0;
+        position: relative;
+        width: var(--wrapper-input-width);
+        height: var(--wrapper-input-height) !important;
+    }
+    .main-action input[type="text"]{
+        width: var(--input-width);
+        max-width: var(--input-width);
+        position: relative;
+        margin: 0;
+        margin-top: calc(var(--wrapper-input-height)/2 - 1.5em);
+        margin-left: calc(calc((var(--wrapper-input-width) - calc(var(--input-width) + var(--button-width)))) / 2);
+        padding: var(--wrapper-padding);
+    }
+    .main-action input[type="button"]{
+        margin: 0;
+        width: var(--button-width);
+        max-width: var(--button-width);
+        padding: var(--wrapper-padding);
+        margin-top: calc(-1 * calc(var(--wrapper-padding)/2));
+    }
+</style>
 
 {% endblock %}
