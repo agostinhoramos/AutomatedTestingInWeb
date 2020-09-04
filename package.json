@@ -1,0 +1,44 @@
+{
+  "name": "automatedtestinginweb",
+  "version": "1.0.0",
+  "description": "Test websites",
+  "main": "gulpfile.js",
+  "scripts": {
+    "Compile": "gulp main",
+    "Watch": "gulp watch" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agostinhopina95/AutomatedTestingInWeb.git"
+  },
+  "keywords": [
+    "Web",
+    "application",
+    "testing",
+    "automatic",
+    "testing",
+    "functional",
+    "testing",
+    "automatic",
+    "testing",
+    "framework",
+    "testing",
+    "tools"
+  ],
+  "author": "Agostinho Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agostinhopina95/AutomatedTestingInWeb/issues"
+  },
+  "homepage": "https://github.com/agostinhopina95/AutomatedTestingInWeb#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "browser-sync": "^2.26.12",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^4.1.0",
+    "jquery": "^3.5.1"
+  }
+}
