@@ -73,4 +73,13 @@
 
     }, false);
 
+    document.onkeyup = function (e) {
+        e = e || window.event;
+        key = e.keyCode;
+
+        if( key == 13 ){ // ESC
+            analyseBTN.click();
+        }
+    }
+    
 })();
