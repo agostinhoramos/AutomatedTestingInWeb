@@ -26,16 +26,18 @@ body {
     max-width: var(--button-width);
 }
 
-.option-device {
-    padding: 0 50px;
+section.controllers {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
-.option-device .nav-item {
+section.controllers .nav-item {
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.option-device .active {
+section.controllers .active {
     border-style: solid;
     border-left-width: 0;
     border-right-width: 0;
@@ -43,7 +45,7 @@ body {
     border-bottom-color: white;
 }
 
-.option-device li a {
+section.controllers li a {
     cursor: pointer;
 }
 
@@ -51,6 +53,6 @@ body {
     min-height: var(--min-result-container-width);
 }
 
-.result-container .spinner-grow{
+.result-container .spinner-grow {
     margin-top: calc(calc(var(--min-result-container-width) / 2) - 2rem);
 }
