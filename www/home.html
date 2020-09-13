@@ -43,10 +43,15 @@
         <nav class="navbar navbar-expand navbar-dark bg-dark tc-header">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link">Task <span class="sr-only">(current)</span></a>
+                    <a class="nav-link">Test 1 <span class="sr-only">(current)</span></a>
                 </li>
+                <!--
                 <li class="nav-item">
-                    <a class="nav-link">Result</a>
+                    <a class="nav-link">Test 2 </a>
+                </li>
+                -->
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-plus"></i></a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -63,7 +68,7 @@
         <div class="spinner-grow text-primary d-none" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="default container pt-5">
+        <div class="default container pt-5 bg-primary d-none          ">
             <div class="row">
                 <div class="col-sm">
                     <div class="info text-justify">
@@ -91,6 +96,48 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="row automation_task" role="app_model">
+                <div class="element task">
+                    <div class="input-group query_selector">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Query selector:</div>
+                        </div>
+                        <input placeholder="body .myClass #myID" type="text" class="form-control">
+                    </div>
+                    <div class="task_event p-3 mt-3">
+                        <div class="input-group option">
+                            <select class="custom-select">
+                                <option type="" value="" selected>Choose...</option>
+                                <option type="1" value="text">Write: Text</option>
+                                <option type="0" value="action->click">Action: Click</option>
+                                <option type="0" value="action->doubleClick">Action: Double Click</option>
+                                <option type="0" value="action->hover">Action: Hover</option>
+                                <option type="0" value="action->Mouseover">Action: Mouseover</option>
+                                <option type="0" value="action->Mousemove">Action: Mousemove</option>
+                                <option type="0" value="action->Mouseenter">Action: Mouseenter</option>
+                                <option type="3" value="timer_action">Timer: Sleep</option>
+                                <option type="1" value="match->string">Math: Text</option>
+                                <option type="2" value="text">Write: Long Text</option>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="create btn btn-outline-secondary" disabled>CREATE</button>
+                            </div>
+                        </div>
+                        <div class="input-group html_element d-none"></div>
+                    </div>
+                    <div class="w-100 text-right mt-3">
+                        <button class="save btn btn-primary" disabled>Save</button>
+                        <button class="clear btn btn-danger">Clear</button>
+                    </div>
+                </div>
+                <div class="sequence"></div>
+            </div>
+        </div>
+        <section class="test-all-btn">
+            <button class="btn btn-success"><i class="fa fa-play"></i>&nbsp; Test ALL</button>
+        </section>
     </div>
 </main>
 {% endblock %}

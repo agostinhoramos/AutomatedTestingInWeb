@@ -29,6 +29,7 @@ body {
 section.controllers {
     position: -webkit-sticky;
     position: sticky;
+    z-index: 9998;
     top: 0;
 }
 
@@ -43,6 +44,17 @@ section.controllers .active {
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+}
+
+section.controllers .active a {
+    color: var(--dark) !important;
+}
+
+.active .nav-link {
+    padding-bottom: 0;
 }
 
 section.controllers li a {
@@ -55,4 +67,15 @@ section.controllers li a {
 
 .result-container .spinner-grow {
     margin-top: calc(calc(var(--min-result-container-width) / 2) - 2rem);
+}
+
+.test-all-btn {
+    position: fixed;
+    opacity: .5;
+    bottom: 50px;
+    right: 30px;
+}
+
+.test-all-btn:hover {
+    opacity: 1;
 }

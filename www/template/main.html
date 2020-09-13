@@ -1,24 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Automated Testing in Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Automated Testing in Web is a capable tool that can perform automatic test in Web Application, as way to make sure that Web application works according to the developers' purpose and meets the minimum security requirements">
-    <meta name="keywords" content="Web application testing, automatic testing, functional testing, automatic testing framework, testing tools">
+    <meta name="description"
+        content="Automated Testing in Web is a capable tool that can perform automatic test in Web Application, as way to make sure that Web application works according to the developers' purpose and meets the minimum security requirements">
+    <meta name="keywords"
+        content="Web application testing, automatic testing, functional testing, automatic testing framework, testing tools">
     <meta name="author" content="Agostinho Ramos">
     <meta name="generator" content="GSC">
-    <link rel="stylesheet" href="{% static 'css/compiled/bootstrap.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/compiled/font-awesome.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/compiled/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/compiled/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/model/_automation_task.css' %}">
 </head>
+
 <body>
     {% block main_content %}
 
     {% endblock %}
-    <script type="text/javascript" src="{% static 'js/compiled/jquery.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/compiled/bootstrap.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/script.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/compiled/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/compiled/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/functions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/model/_automation_task.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>

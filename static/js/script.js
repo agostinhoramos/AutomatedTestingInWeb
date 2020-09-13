@@ -61,7 +61,6 @@
     function () {
       // Clear..
       hideMSG();
-
       var url = analyseTEXT.value;
       if (url.length > 0) {
         startLoading();
@@ -84,7 +83,8 @@
     }
   };
 
-  setTimeout(function () {
-    //analyseBTN.click();
-  }, 1000);
+  $(".test-all-btn button").click(function () {
+    if (true) {
+    }
+  });
 })();

@@ -1,0 +1,74 @@
+.automation-task[role="app_model"] {
+    margin: 0;
+    padding: 0;
+}
+
+.automation_task .element {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.task {
+    width: 100%;
+    height: auto;
+    margin: 0 5px;
+    background-color: #f1f1f1;
+}
+
+.automation-task {
+    width: 100%;
+    height: 120px;
+    background-color: #f1f1f1;
+}
+
+.automation-task:after {
+    --size-automation-task-indicator: 23px;
+    content: '';
+    position: relative;
+    width: 0;
+    height: 0;
+    bottom: -37px;
+    margin-left: calc(50% - calc(var(--size-automation-task-indicator) / 2));
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-width: var(--size-automation-task-indicator);
+    border-style: solid;
+    border-color: #FFF transparent transparent transparent;
+}
+
+.close {
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.task_event {
+    border-style: dotted;
+    border-color: white;
+}
+
+.automation-task .html,
+.automation-task textarea {
+    width: 100%;
+    height: 38px;
+    max-height: 38px !important;
+    min-height: 38px !important;
+    overflow: hidden;
+}
+
+.query-selector input {
+    font-family: SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+}
+
+.sequence {
+    width: 100%;
+    padding: 0 5px;
+    padding-top: 10px;
+}
