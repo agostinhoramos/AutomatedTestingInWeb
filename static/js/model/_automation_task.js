@@ -4,7 +4,7 @@
       '<button class="object_model w-100 btn btn-secondary" disabled>(%description%)</button>',
       '<input class="object_model w-100 form-control" type="text" value="(%text%)" placeholder="(%description%)" readonly="readonly">',
       '<textarea class="object_model form-control" type="text" placeholder="(%description%)" readonly="readonly">(%text%)</textarea>',
-      '<button class="object_model w-100 btn btn-danger" control="input:range" disabled>(%description%)&nbsp; <span>1</span>&nbsp; min</button>',
+      '<button class="object_model w-100 btn btn-danger" control="input:range" disabled>(%description%)&nbsp; <span>1</span>&nbsp; sec</button>',
     ],
     [
       '<section class="element automation-task"><span class="badge badge-light">(%number%)</span>&nbsp;Query Selector: <code>(%query_selector%)</code>' +
@@ -104,7 +104,7 @@
       try {
         const $e = $('.task .object_model[control="input:range"]');
         $e.parent(".html_element").append(
-          '<input type="range" min="0" max="5" step="0.5" value="1" class="form-control-range mt-1" />'
+          '<input type="range" min="0" max="300" step="1" value="5" class="form-control-range mt-1" />'
         );
         $root_element.find('.task input[type="range"]').change(function () {
           current_object_event[3] = $(this).val();

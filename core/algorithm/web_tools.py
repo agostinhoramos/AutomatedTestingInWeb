@@ -4,6 +4,12 @@ from bs4 import BeautifulSoup
 import time
 
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+
 
 class web_tools:
     def __init__(self, url):
@@ -11,29 +17,38 @@ class web_tools:
         self.driver.get(url)
         self.html = self.driver.page_source
         self.url = url
-        self.driver.close()
 
-    def info(self, type):
-        values = []
+    def new_task(self, arr):
+        driver = self.driver
+        arr_result = []
+        for obj in arr:
+            try:
+                if(len(obj['query_selector']) > 0):
+                    selector = driver.find_element_by_css_selector(
+                        obj['query_selector']
+                    )
 
-        soup = BeautifulSoup(self.html, features="html.parser")
+                if(obj['action_code'] == 'implicitly->wait'):
+                    driver.implicitly_wait(int(obj['string']))
 
-        origin_url = self.url
+                if(obj['action_code'] == 'time->sleep'):
+                    time.sleep(int(obj['string']))
 
-        css_files = []
-        for css in soup.find_all("link"):
-            if css.attrs.get("href"):
-                css_url = urljoin(origin_url, css.attrs.get("href"))
-                css_files.append(css_url)
+                if(obj['action_code'] == 'write->text'):
+                    selector.send_keys(obj['string'])
 
-        js_files = []
-        for js in soup.find_all("script"):
-            if js.attrs.get("src"):
-                js_url = urljoin(origin_url, js.attrs.get("src"))
-                js_files.append(js_url)
+                if(obj['action_code'] == 'action->click'):
+                    selector.click()
 
-        values = css_files + js_files
-        url_all = ''
-        for value in values:
-            url_all += value + '<br/>'
-        return [url_all]
+                if(obj['action_code'] == 'driver->wait'):
+                    main = WebDriverWait(driver, 10).until(
+                        EC.presence_of_all_elements_located((By.ID, "main"))
+                    )
+                    print(main.text)
+
+                arr_result.append(True)
+            except:
+                arr_result.append(False)
+
+        print(arr_result)  # print array
+        driver.close()  # close browser...
