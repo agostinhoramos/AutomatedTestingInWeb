@@ -37,3 +37,10 @@ The application will perform several tests to verify that the site works accordi
 
 ### Open this URL on browser
 http://127.0.0.1:8000
+
+
+
+
+
+### Other links
+[selenium](https://selenium-python.readthedocs.io/installation.html)
