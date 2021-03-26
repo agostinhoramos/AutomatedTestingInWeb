@@ -36,7 +36,7 @@ The application will perform several tests to verify that the site works accordi
 
 
 ### Open this URL on browser
-http://127.0.0.1:8000
+http://127.0.0.1:2700
 
 
 
